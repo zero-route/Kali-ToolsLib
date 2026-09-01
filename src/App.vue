@@ -12,7 +12,7 @@ import ReverseEngineering from './sections/ReverseEngineering.vue'
 import PostExploitation from './sections/PostExploitation.vue'
 import NetworkingPivoting from './sections/NetworkingPivoting.vue'
 import CryptographySteganography from './sections/CryptographySteganography.vue'
-import ReportingDocumentation from './sections/Reporting&Documentation.vue'
+import ReportingDocumentation from './sections/ReportingDocumentation.vue'
 import CloudSecurity from './sections/CloudSecurity.vue'
 </script>
 
