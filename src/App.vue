@@ -22,7 +22,7 @@ import CloudSecurity from './sections/CloudSecurity.vue'
       <!-- Header -->
       <header class="text-center my-10 animate-fade-in">
         <div class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-[#42b883] bg-[#42b883]/10 border border-[#42b883]/30 rounded-full uppercase">
-          Cybersecurity Tools Repositor
+          Cybersecurity Tools Repository
         </div>
         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-4">
           Kali <span class="text-[#42b883]">ToolsLib</span>
