@@ -1,49 +1,59 @@
 <script setup>
-import { ref } from 'vue'
-import ToolCard from './components/ToolCard.vue'
-
-// Array daftar tools (bisa ditambah bertahap)
-const tools = ref([
-  {
-    id: 1,
-    title: 'Placeholder Tool',
-    description: 'Tool pertama kamu bakal ditaruh di sini. Kirim detail kodenya kapan saja.',
-    category: 'Development',
-    link: '#'
-  }
-])
+// Import semua komponen dari folder sections
+import InformationGathering from './sections/InformationGathering.vue'
+import PasswordAttack from './sections/PasswordAttack.vue'
+import WirelessAttacks from './sections/WirelessAttacks.vue'
+import WebApplication from './sections/WebApplication.vue'
+import ExploitationTools from './sections/ExploitationTools.vue'
+import VulnerabilityAnalysis from './sections/VulnerabilityAnalysis.vue'
+import SniffingSpoofing from './sections/Sniffing&Spoofing.vue'
+import DigitalForensics from './sections/DigitalForensics.vue'
+import ReverseEngineering from './sections/ReverseEngineering.vue'
+import PostExploitation from './sections/PostExploitation.vue'
+import NetworkingPivoting from './sections/Networking&Pivoting.vue'
+import CryptographySteganography from './sections/Cryptography&Steganography.vue'
+import ReportingDocumentation from './sections/Reporting&Documentation.vue'
+import CloudSecurity from './sections/CloudSecurity.vue'
 </script>
 
 <template>
-  <div class="min-h-screen px-4 py-12 md:px-8 max-w-6xl mx-auto flex flex-col justify-between">
+  <div class="min-h-screen px-4 py-8 md:px-8 max-w-7xl mx-auto flex flex-col justify-between">
     <div>
       <!-- Header -->
       <header class="text-center my-10 animate-fade-in">
-        <div class="inline-block px-4 py-1.5 mb-4 text-xs font-medium text-[#42b883] bg-[#42b883]/10 border border-[#42b883]/30 rounded-full">
-          Vue 3 + Vite Workspace
+        <div class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-[#42b883] bg-[#42b883]/10 border border-[#42b883]/30 rounded-full uppercase">
+          Cybersecurity Tools Repository
         </div>
         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-4">
-          Tools<span class="text-[#42b883]">Hub</span>
+          Kali <span class="text-[#42b883]">ToolsLib</span>
         </h1>
-        <p class="text-gray-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed">
-          Kumpulan tools interaktif berbasis web dengan performa tinggi.
+        <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+          Kumpulan tools penetration testing & digital forensics terorganisir.
         </p>
       </header>
 
-      <!-- Grid list tools -->
-      <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
-        <ToolCard 
-          v-for="(tool, index) in tools" 
-          :key="tool.id" 
-          :tool="tool" 
-          :index="index" 
-        />
+      <!-- Sections List -->
+      <main class="space-y-12 my-10">
+        <InformationGathering />
+        <PasswordAttack />
+        <WirelessAttacks />
+        <WebApplication />
+        <ExploitationTools />
+        <VulnerabilityAnalysis />
+        <SniffingSpoofing />
+        <DigitalForensics />
+        <ReverseEngineering />
+        <PostExploitation />
+        <NetworkingPivoting />
+        <CryptographySteganography />
+        <ReportingDocumentation />
+        <CloudSecurity />
       </main>
     </div>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-600 text-xs py-8 border-t border-gray-900 mt-12">
-      Built with Vue.js & Tailwind CSS
+    <footer class="text-center text-gray-600 text-xs py-8 border-t border-gray-900/80 mt-16">
+      Built with Vue.js, Vite & Tailwind CSS
     </footer>
   </div>
 </template>
