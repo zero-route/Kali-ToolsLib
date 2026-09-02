@@ -1,7 +1,7 @@
 <script setup>
 import Background from './components/Background.vue'
 
-// Import semua komponen dari folder sections
+// Import semua section
 import InformationGathering from './sections/InformationGathering.vue'
 import PasswordAttack from './sections/PasswordAttack.vue'
 import WirelessAttacks from './sections/WirelessAttacks.vue'
@@ -19,7 +19,7 @@ import CloudSecurity from './sections/CloudSecurity.vue'
 </script>
 
 <template>
-  <div class="relative min-h-screen bg-[#14110E] overflow-hidden">
+  <div class="relative min-h-screen bg-[#09070d] overflow-hidden">
     <!-- Canvas Background -->
     <div class="fixed inset-0 z-0 pointer-events-auto">
       <Background />
@@ -75,7 +75,6 @@ import CloudSecurity from './sections/CloudSecurity.vue'
 </template>
 
 <style scoped>
-/* Keyframe animasi Fade In + Slide dari bawah ke atas */
 @keyframes slideUpFade {
   from {
     opacity: 0;
