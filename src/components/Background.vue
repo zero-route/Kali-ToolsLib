@@ -19,13 +19,13 @@ interface ShapeGridProps {
 }
 
 const props = withDefaults(defineProps<ShapeGridProps>(), {
-  direction: 'diagonal',
-  speed: 0.5,
-  borderColor: 'rgba(66, 184, 131, 0.15)',
+  direction: 'right',
+  speed: 1,
+  borderColor: '#999',
   squareSize: 40,
-  hoverFillColor: '#42b883',
-  shape: 'hexagon',
-  hoverTrailAmount: 5
+  hoverFillColor: '#222',
+  shape: 'square',
+  hoverTrailAmount: 0
 });
 
 const canvasRef = ref<HTMLCanvasElement | null>(null);
