@@ -1,6 +1,5 @@
 <script setup>
-// Import komponen background
-import ShapeGrid from './components/Background.vue'
+import Background from './components/Background.vue'
 
 // Import semua komponen dari folder sections
 import InformationGathering from './sections/InformationGathering.vue'
@@ -21,30 +20,28 @@ import CloudSecurity from './sections/CloudSecurity.vue'
 
 <template>
   <div class="relative min-h-screen bg-[#14110E] overflow-hidden">
-    <!-- Background Canvas (Fixed di paling belakang) -->
+    <!-- Canvas Background -->
     <div class="fixed inset-0 z-0 pointer-events-auto">
-      <ShapeGrid
-        :speed="0.5"
-        :square-size="40"
-        direction="diagonal"
-        border-color="rgba(66, 184, 131, 0.15)"
-        hover-fill-color="#42b883"
-        shape="hexagon"
-        :hover-trail-amount="5"
-      />
+      <Background />
     </div>
 
-    <!-- Konten Utama (Berada di atas background) -->
+    <!-- Main Content Container -->
     <div class="relative z-10 px-4 py-8 md:px-8 max-w-7xl mx-auto flex flex-col justify-between min-h-screen">
       <div>
         <!-- Header -->
-        <header class="text-center my-10 animate-fade-in">
-          <div class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-[#42b883] bg-[#42b883]/10 border border-[#42b883]/30 rounded-full uppercase">
-            Cybersecurity Tools Repository
-          </div>
-          <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-4">
-            Kali <span class="text-[#42b883]">ToolsLib</span>
+        <header class="text-center my-10 animate-slide-up">
+          <h1 class="font-['Audiowide',sans-serif] text-5xl md:text-7xl font-bold tracking-wider mb-6 flex flex-col gap-2 items-center">
+            <!-- Baris Atas: Kali Tools (Warna Putih) -->
+            <span class="text-white drop-shadow-md">
+              Kali Tools
+            </span>
+            
+            <!-- Baris Bawah: Library (Gradient Putih ke Hijau Vue) -->
+            <span class="bg-gradient-to-b from-white via-white/90 to-[#42b883] bg-clip-text text-transparent">
+              Library
+            </span>
           </h1>
+
           <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             Kumpulan tools penetration testing & digital forensics terorganisir.
           </p>
@@ -76,3 +73,21 @@ import CloudSecurity from './sections/CloudSecurity.vue'
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Keyframe animasi Fade In + Slide dari bawah ke atas */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+</style>
